@@ -13,8 +13,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f04d41fd-1ade-477d-bde6-38d9d08be3cf}</ProjectGuid>
-    <RootNamespace>flexbisonBase</RootNamespace>
+    <ProjectGuid>{edd7aad0-c567-455a-b20d-65d6b3d01b49}</ProjectGuid>
+    <RootNamespace>FlexBison</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -33,6 +33,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="winflexbison\custom_build_rules\win_flex_bison_custom_build.props" />
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
@@ -45,6 +46,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(ProjectDir)winflexbison;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -55,7 +57,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -79,13 +80,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\FlexBison\SampleCalc.flex.cpp" />
-    <ClCompile Include="..\FlexBison\SampleCalc.tab.cpp" />
+    <Flex Include="SampleCalc.l" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\FlexBison\SampleCalc.tab.h" />
+    <Bison Include="SampleCalc.y" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="winflexbison\custom_build_rules\win_flex_bison_custom_build.targets" />
   </ImportGroup>
 </Project>

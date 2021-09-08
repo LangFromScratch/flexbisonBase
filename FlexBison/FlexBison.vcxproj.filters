@@ -15,16 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\FlexBison\SampleCalc.flex.cpp">
+    <Flex Include="SampleCalc.l">
       <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\FlexBison\SampleCalc.tab.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
+    </Flex>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\FlexBison\SampleCalc.tab.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
+    <Bison Include="SampleCalc.y">
+      <Filter>ソース ファイル</Filter>
+    </Bison>
   </ItemGroup>
 </Project>
