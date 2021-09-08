@@ -13,8 +13,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f04d41fd-1ade-477d-bde6-38d9d08be3cf}</ProjectGuid>
-    <RootNamespace>flexbisonBase</RootNamespace>
+    <ProjectGuid>{edd7aad0-c567-455a-b20d-65d6b3d01b49}</ProjectGuid>
+    <RootNamespace>FlexBison</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
