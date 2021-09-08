@@ -80,6 +80,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Flex Include="SampleCalc.l" />
+  </ItemGroup>
+  <ItemGroup>
+    <Bison Include="SampleCalc.y" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
